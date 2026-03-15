@@ -2,6 +2,8 @@
 
 Demo: AI-assisted Groupon deal generation for small local merchants
 
+Prototype built using Streamlit and OpenAI to generate strategic Groupon deal drafts for small merchants.
+
 Prototype: **AI-assisted Groupon deal generation for small local merchants**
 
 This prototype demonstrates how AI can reduce friction in Groupon’s merchant onboarding flow by automatically generating **publish-ready deal drafts from minimal merchant input**.
