@@ -58,8 +58,14 @@ business_type_options = ["Waxing", "Lashes", "Waxing + Lashes", "Nails", "Facial
 # Header
 # -----------------------------
 st.title("AI Groupon Deal Draft Assistant")
-st.write("Generate a Groupon-style deal for small merchants like Sofia.")
-st.caption("Prototype: AI-assisted Groupon deal generation for small local merchants")
+
+st.write(
+    "Generate AI-powered Groupon deal strategies for small local merchants."
+)
+
+st.caption(
+    "Prototype demonstrating how AI can reduce friction in Groupon’s merchant deal creation workflow."
+)
 
 # -----------------------------
 # Sample selector
@@ -74,6 +80,8 @@ sample_data = SAMPLE_MERCHANTS[selected_sample]
 # -----------------------------
 # Input form
 # -----------------------------
+st.subheader("Merchant Information")
+st.write("Provide a few details about the business to generate deal strategies.")
 with st.form("deal_form"):
     business_name = st.text_input(
         "Business name",
@@ -228,7 +236,7 @@ Rules:
                 best_option_label = result.get("best_option_label", "No recommendation")
                 best_option_reason = result.get("best_option_reason", "No explanation provided.")
                 options = result.get("deal_options", [])
-
+                st.divider()
                 st.subheader("AI Best Recommendation")
                 st.success(f"⭐ **Recommended: {best_option_label}** — {best_option_reason}")
                 st.markdown("---")
